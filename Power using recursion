@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int ans(int b, int p)
+{
+    if (p!= 0)
+        return (b*ans(b,p-1));
+    else
+        return 1;
+}
+int main()
+{
+    int b, p, result;
+    cin >>b>>p;
+    result = ans(b,p);
+    cout<<result;
+    return 0;
+}
